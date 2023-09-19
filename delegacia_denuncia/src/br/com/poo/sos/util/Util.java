@@ -16,6 +16,10 @@ public class Util {
 		// Lança uma exceção IllegalStateException se alguém tentar criar uma instância desta classe
 		throw new IllegalStateException(Util.class.getName());
 	}
+	
+	public static void limpa() {
+		System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+	}
 
 	// Configura e retorna um Logger personalizado
 	public static Logger setupLogger() {

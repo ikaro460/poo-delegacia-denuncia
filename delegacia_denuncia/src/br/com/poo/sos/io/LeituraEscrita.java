@@ -43,8 +43,7 @@ public class LeituraEscrita {
 
 				} else if (path.equalsIgnoreCase("DENUNCIAS")) {
 					// cria objeto
-					Denuncia dn = new Denuncia(dados[0], dados[1], dados[2],
-							Integer.parseInt(dados[3]));
+					Denuncia dn = new Denuncia(dados[0], dados[1], dados[2], Integer.parseInt(dados[3]));
 
 					// insere a conta poupanca nos mapas
 					Denuncia.mapaDenuncias.computeIfAbsent(dados[3], k -> new ArrayList<>()).add(dn);
@@ -59,21 +58,4 @@ public class LeituraEscrita {
 		buffRead.close();
 	}
 
-	public static void escritor(String path, String cliente, String conta) throws IOException {
-
-		try (BufferedReader buffRead = new BufferedReader(new FileReader(PATH_BASICO + path + EXTENSAO))) {
-			String dado = "";
-
-			for (int i = 0; i < contador + 1; i++) {
-				dado = buffRead.readLine();
-				if (dado == null) {
-					try (BufferedWriter buffWriter = new BufferedWriter(
-							new FileWriter(PATH_BASICO + path + EXTENSAO, true))) {
-						buffWriter.append(cliente);
-						buffWriter.append(conta);
-					}
-				}
-			}
-		}
-	}
 }
