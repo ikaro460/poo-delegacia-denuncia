@@ -1,9 +1,0 @@
-Delegacia: 13 DP
-Rua Barao do Rio Branco
-
-Delegacia: 16 DP
-Av do Imperador
-
-Delegacia: 22 DP
-Rua Teresa
-
