@@ -3,6 +3,7 @@ package br.com.poo.sos.util;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Formatter;
 import java.util.logging.Handler;
+import java.util.logging.Level;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
@@ -15,6 +16,12 @@ public class Util {
 	private Util() {
 		// Lança uma exceção IllegalStateException se alguém tentar criar uma instância desta classe
 		throw new IllegalStateException(Util.class.getName());
+	}
+	
+	public static void limpa() {
+		Logger customLogger = Util.setupLogger();
+		Util.customizer();
+		customLogger.log(Level.INFO,"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 	}
 
 	// Configura e retorna um Logger personalizado
